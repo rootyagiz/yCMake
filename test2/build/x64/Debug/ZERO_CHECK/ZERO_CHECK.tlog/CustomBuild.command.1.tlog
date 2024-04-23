@@ -1,0 +1,10 @@
+^C:\USERS\BURCU\ONEDRIVE\DOCUMENTS\SANDBOX\YCMAKE\TEST2\BUILD\CMAKEFILES\8DFA3DD5D207407018C25B8487FDD876\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/burcu/OneDrive/Documents/sandbox/yCMake/test2/source -BC:/Users/burcu/OneDrive/Documents/sandbox/yCMake/test2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/burcu/OneDrive/Documents/sandbox/yCMake/test2/build/helloApp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
